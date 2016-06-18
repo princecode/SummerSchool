@@ -23,8 +23,11 @@ namespace SummerSchool
             Console.WriteLine();
 
             Console.WriteLine(">");
-            Console.ReadLine();
-
+            string menuEnt = Console.ReadLine();
+            //the below was just a test to make sure the above was capturing user input
+            //Need to write code to limit entires to the ones in the menu
+            //need to refactor add loops to catch invalid entires and maybe array for menu options
+            Console.WriteLine(menuEnt);
 
 
 
