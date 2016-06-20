@@ -8,13 +8,15 @@ namespace SummerSchool
 {
     class Program
     {
-        static string[] Students = new string[15];
+        static string[] Students = new string[3];
 
         static void Main(string[] args)
         {
             while (true)
             {
                 Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("___________________________________________________");
                 Console.WriteLine();
                 Console.WriteLine("Welcome to the School Enrollment System.");
                 Console.WriteLine("Term: Summer");
@@ -63,8 +65,17 @@ namespace SummerSchool
             //put student in the next available spot in Students
             int spot = GetNextAvialbleSpot();
 
-            Students[spot] = stu;
-            //method to find next available spot in students
+            if (spot == -1)
+            {
+                Console.WriteLine("ENROLLMENT COLSED!");
+                Console.WriteLine("Please press <ENTER> to return to the main menu.");
+                Console.ReadKey();             
+            }
+            else
+            {
+                Students[spot] = stu;
+                //method to find next available spot in students
+            }
 
         }
 
