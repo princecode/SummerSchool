@@ -46,7 +46,7 @@ namespace SummerSchool
                    // Exit();
 
 
-                    Console.ReadLine();
+                   
 
                 }
             }   
