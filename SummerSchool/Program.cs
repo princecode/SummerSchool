@@ -10,56 +10,51 @@ namespace SummerSchool
     {
         static string[] Students = new string[15];
 
-        static void Main(string[] args)        
+        static void Main(string[] args)
         {
             while (true)
-            { 
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Welcome to the School Enrollment System.");
-            Console.WriteLine("Term: Summer");
-            Console.WriteLine("Please enter a number to make a selection.");
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Welcome to the School Enrollment System.");
+                Console.WriteLine("Term: Summer");
+                Console.WriteLine("Please enter a number to make a selection.");
 
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("1. Enroll a student");
-            Console.WriteLine("2. Unenroll a student");
-            Console.WriteLine("3. Print list of enrolled students");
-            Console.WriteLine("4. Exit");
-            Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("1. Enroll a student");
+                Console.WriteLine("2. Unenroll a student");
+                Console.WriteLine("3. Print list of enrolled students");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine();
 
-            int menuEnt = Convert.ToInt32(Console.ReadLine());
+                int menuEnt = Convert.ToInt32(Console.ReadLine());
                 if (menuEnt == 1)
                 {
                     Enroll();
                 }
                 else if (menuEnt == 2)
                 {
-                   Unenroll();
+                    //Unenroll();
                 }
-                else if ( menuEnt == 3)
+                else if (menuEnt == 3)
                 {
-                   Print();
+                    //Print();
                 }
                 else if (menuEnt == 4)
                 {
                     //Quit
-                    break;                                    
+                    break;
                 }
                 else
                 {
-// not sure what all is suposed to be here. or if I have/am missing {'s....
+                    Console.ReadLine();
+                    // not sure what all is suposed to be here. or if I have/am missing {'s....
                 }
-            }   
-         
-        }
-        static void Unenroll()
-        {
-            for (int = 0; i < 15; int++)
-            {
-                //?
             }
+
         }
+
         static void Enroll()
         {
             Console.WriteLine("What's the name of the student to enroll?");
@@ -71,30 +66,42 @@ namespace SummerSchool
             Students[spot] = stu;
             //method to find next available spot in students
 
-            static void GetNextAvialbleSpot()
+        }
+
+        static int GetNextAvialbleSpot()
+        {
+            for (int i = 0; i < Students.Length; i++)
+            {
+                if (Students[i] == null)
                 {
-                for (int i = 0; i < Students.Length; i++)
-                {
-                    if (Students[i] == null)
-                    {
-                        //we found one!
-                        return i;
-                    }
-                    else
-                    {
-                        return -1;
-                            }
-                        break;
-                    }
+                    //we found one!
+                    return i;
                 }
 
             }
-
-            
-            }
-        
-
+            // if we get through the whole 
+            return -1;
         }
+        //static void Unenroll()
+        //{
+        //    for (int = 0; i < 15; int++)
+        //    {
+        //        //?
+        //    }
+        //}
+
+        //private static void Print()
+        //{
+        //    for (int i = 0; i < Students.Length; i++)
+        //    {
+        //        if
+        //    }
+        //}
 
     }
+
+
+}
+
+
 
