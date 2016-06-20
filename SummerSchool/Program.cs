@@ -8,7 +8,7 @@ namespace SummerSchool
 {
     class Program
     {
-        static string[] Roster = new string[15];
+        static string[] Students = new string[15];
 
         static void Main(string[] args)        
         {
@@ -35,36 +35,64 @@ namespace SummerSchool
                 }
                 else if (menuEnt == 2)
                 {
-                   // Unenroll();
+                   Unenroll();
                 }
                 else if ( menuEnt == 3)
                 {
-                   // Print();
+                   Print();
                 }
                 else if (menuEnt == 4)
                 {
-                   // Exit();
-
-
-                   
-
+                    //Quit
+                    break;                                    
+                }
+                else
+                {
+// not sure what all is suposed to be here. or if I have/am missing {'s....
                 }
             }   
          
         }
-        private static void Enroll()
+        static void Unenroll()
         {
+            for (int = 0; i < 15; int++)
+            {
+                //?
+            }
+        }
+        static void Enroll()
+        {
+            Console.WriteLine("What's the name of the student to enroll?");
             string stu = Console.ReadLine();
 
-            for (int i = 0; i < 15; i++ )
-            {
-                if (Roster[i] == null)              
+            //put student in the next available spot in Students
+            int spot = GetNextAvialbleSpot();
+
+            Students[spot] = stu;
+            //method to find next available spot in students
+
+            static void GetNextAvialbleSpot()
+                {
+                for (int i = 0; i < Students.Length; i++)
+                {
+                    if (Students[i] == null)
                     {
-                        Roster[i] = stu;
+                        //we found one!
+                        return i;
+                    }
+                    else
+                    {
+                        return -1;
+                            }
                         break;
                     }
                 }
+
             }
+
+            
+            }
+        
 
         }
 
