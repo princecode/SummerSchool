@@ -8,12 +8,13 @@ namespace SummerSchool
 {
     class Program
     {
-        static string[] Students = new string[3];
+        static string[] Students = new string[2];
 
         static void Main(string[] args)
         {
             while (true)
             {
+                //blank "Console.WriteLine();'s" are to create spacing/padding to help with visual presentation on ui
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("___________________________________________________");
@@ -67,7 +68,11 @@ namespace SummerSchool
 
             if (spot == -1)
             {
-                Console.WriteLine("ENROLLMENT COLSED!");
+                Console.WriteLine();
+                Console.WriteLine("_________________________________________________");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("School roster at capacity! ENROLLMENT IS CURRENTLY COLSED!");
                 Console.WriteLine("Please press <ENTER> to return to the main menu.");
                 Console.ReadKey();             
             }
