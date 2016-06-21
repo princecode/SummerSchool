@@ -61,7 +61,7 @@ namespace SummerSchool
                 }
                 else if (menuEnt == 2)
                 {
-                    //Unenroll();
+                    Unenroll();
                 }
                 else if (menuEnt == 3)
                 {
@@ -195,23 +195,18 @@ namespace SummerSchool
             // if we get through the whole 
             return -1;
         }
-            ////static void Unenroll()
-            ////{
-            ////    for (int = 0; i < Students.Length; i++)
-            ////    {
-            ////        if ()
-            ////    }
-            ////}
-            ////static void Tuition()
-            ////{
-            //    //int tuition;
 
-            //    //for (int i = 0; i < Students.Length; i++)
-            //    //{
+        // Method to Unenroll students. Present list of stus and take user selection, remove corresponding stu, confirm selection
+            private static void Unenroll()
+        {
+            Console.WriteLine("Please select the student you would like to unenroll.");
+            Print();
 
-            //    //}
-
-            //}
+            int stuNum = Convert.ToInt32(Console.ReadLine());
+            int stuIndex = stuNum - 1;
+            Console.WriteLine(Students[stuIndex]);
+        }
+            
            
         private static void Print()
         {
