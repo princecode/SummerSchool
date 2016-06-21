@@ -8,7 +8,7 @@ namespace SummerSchool
 {
     class Program
     {
-        static string[] Students = new string[2];
+        static string[] Students = new string[15];
 
         static void Main(string[] args)
         {
@@ -58,13 +58,19 @@ namespace SummerSchool
 
         }
 
+        
+        //static string Tuition()
+        //{
+        //    Console.WriteLine("200");
+        //}
+
         static void Enroll()
         {
             Console.WriteLine("What's the name of the student to enroll?");
             string stu = Console.ReadLine();
 
             //put student in the next available spot in Students
-            int spot = GetNextAvialbleSpot();
+            int spot = GetNextAvialbleSpot();            
 
             if (spot == -1)
             {
@@ -74,16 +80,18 @@ namespace SummerSchool
                 Console.WriteLine();
                 Console.WriteLine("School roster at capacity! ENROLLMENT IS CURRENTLY COLSED!");
                 Console.WriteLine("Please press <ENTER> to return to the main menu.");
-                Console.ReadKey();             
+                Console.ReadKey();
             }
             else
             {
                 Students[spot] = stu;
-                //method to find next available spot in students
+                string tuition = "200";
+                Console.WriteLine(stu + " has been enrolled at a tuition of £" + tuition);
+                
             }
 
         }
-
+        //method to find next available spot in students
         static int GetNextAvialbleSpot()
         {
             for (int i = 0; i < Students.Length; i++)
@@ -98,26 +106,26 @@ namespace SummerSchool
             // if we get through the whole 
             return -1;
         }
+
         //static void Unenroll()
         //{
-        //    for (int = 0; i < 15; int++)
-        //    {
-        //        //?
-        //    }
-        //}
-
-        //private static void Print()
-        //{
-        //    for (int i = 0; i < Students.Length; i++)
+        //    for (int = 0; i < Students.Length; i++)
         //    {
         //        if
         //    }
         //}
-
+        //private static void Print()
+        //{
+        //    for (int i = 0; i < Students.Length; i++)
+        //    {
+        //        Console.WriteLine(i + 1 + ". " + Students[i]);
+        //    }
+        //}
     }
-
-
 }
+
+
+
 
 
 
