@@ -46,6 +46,9 @@ namespace SummerSchool
                 Console.WriteLine("                                                   |");
 
 
+                
+
+
 
 
 
@@ -109,17 +112,6 @@ namespace SummerSchool
 
 
         }
-        //else
-        //{
-
-        //}
-
-
-
-        //---------------------------------------------------------------------------
-
-
-
 
 
         static void Enroll()
@@ -131,6 +123,15 @@ namespace SummerSchool
             Console.WriteLine();
             Console.WriteLine();
             string stu = Console.ReadLine();
+
+            // code to process name and route accoridnigly goes here (have to create corresponding methods):
+            //string firstName = splitNames[0];
+            //string lastName = splitNames[splitNames.Length - 1];
+            //if (lastName.ToLower() == "malfoy")
+            // Console.Writeline("No Malfoys....);
+            // return;
+            //so on...(see github class example)
+
 
             //put student in the next available spot in Students
             int spot = GetNextAvialbleSpot();
@@ -214,19 +215,24 @@ namespace SummerSchool
             int stuNum = Convert.ToInt32(Console.ReadLine());
             //convert users # selection to correlating index
             int stuIndex = stuNum - 1;
+
             // Present selected stu
-            Console.WriteLine("You have selected:");
-            Console.WriteLine("****|>" + Students[stuIndex] + "<|****");
+            Console.WriteLine("You have selected:\n");
+            Console.WriteLine("****|>" + Students[stuIndex] + "<|****\n");
+
             //confirm unenroll
-            Console.WriteLine("Are you sure you want to uneroll this student?  Enter: y/n");
+            Console.WriteLine("Are you sure you want to uneroll this student?  Enter: y/n\n");
             string unenrollconf = Console.ReadLine();
+
+            //attempt to preserve stu name after removal for removal display message
+            string removedStu = Students[stuIndex];
             // remove if confirmed
             if (unenrollconf.ToLower() == "y")
             {
                 //removes student from array index slot
                 Students[stuIndex] = null;
-            Console.WriteLine("The student has been unenrolled.");
-            Print();
+                Console.WriteLine(removedStu + " has been unenrolled.\n");
+                Print();
 
                 //Console.WriteLine("Press any key to return to the menu.");
                 //Console.ReadKey();
@@ -250,20 +256,12 @@ namespace SummerSchool
                     Console.WriteLine(i + 1 + ". " + Students[i] + "   Tuition: £200");
                     // add line to total enrolled students and display # of available spots                    
                 }
-                
 
-            }
-            //Console.WriteLine();
-            //Console.WriteLine("Please press <ENTER> to return to continue.");
-            //Console.ReadKey();
-            //Console.WriteLine();
-            //Console.WriteLine();
+
+            }            
+            Console.WriteLine("\nPlease press <ENTER> to return to continue.\n\n");
+            Console.ReadKey();            
         }
-        Console.WriteLine();
-        Console.WriteLine("Please press <ENTER> to return to continue.");
-        Console.ReadKey();
-        Console.WriteLine();
-        Console.WriteLine();
     }
 }
 
