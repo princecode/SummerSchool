@@ -184,9 +184,12 @@ namespace SummerSchool
         {
             for (int i = 0; i < Students.Length; i++)
             {
-                //Console.WriteLine(Students);    <---- only captured one arg  in array at a time presented weird
-                // Finally figured this out, for ever index i, add 1 and a ".", then the name stored in array Students[] for every i
-                Console.WriteLine(i + 1 + ". " + Students[i]);
+                if (Students[i] != null)
+                {
+                    //Console.WriteLine(Students);    <---- only captured one arg  in array at a time presented weird
+                    // Finally figured this out, for ever index i, add 1 and a ".", then the name stored in array Students[] for every i
+                    Console.WriteLine(i + 1 + ". " + Students[i]);
+                }
               
             }
             Console.WriteLine();
