@@ -76,7 +76,8 @@ namespace SummerSchool
                 {
                     Console.WriteLine("---------------------------------------------------|");
                     Console.WriteLine("                                                   |");
-                    Console.ReadLine();
+                    Console.WriteLine("Invalid entry. Please select on of the options listed by enter in number and pressing >ENTER<");
+                    Console.ReadKey();
                     Console.WriteLine("                                                   |");
                     Console.WriteLine("---------------------------------------------------|");
 
@@ -136,6 +137,7 @@ namespace SummerSchool
                     string tuition = "200";
                     Console.WriteLine();
                     Console.WriteLine();
+                    Console.WriteLine();
                     Console.WriteLine("******************************************************************|");
                     Console.WriteLine("******************************************************************|");
                     Console.WriteLine();
@@ -182,15 +184,20 @@ namespace SummerSchool
         //}
         private static void Print()
         {
+            Console.WriteLine();
+            Console.WriteLine("Enrolled Students");
+            Console.WriteLine("-----------------");
             for (int i = 0; i < Students.Length; i++)
-            {
+            {                
                 if (Students[i] != null)
                 {
                     //Console.WriteLine(Students);    <---- only captured one arg  in array at a time presented weird
                     // Finally figured this out, for ever index i, add 1 and a ".", then the name stored in array Students[] for every i
+                    
                     Console.WriteLine(i + 1 + ". " + Students[i]);
-                }
-              
+                    // add line to total enrolled students and display # of available spots                    
+                }               
+
             }
             Console.WriteLine();
             Console.WriteLine("Please press <ENTER> to return to the main menu.");
