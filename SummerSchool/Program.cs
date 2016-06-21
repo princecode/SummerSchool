@@ -42,9 +42,9 @@ namespace SummerSchool
                 Console.WriteLine("---------------------------------------------------|");
                 Console.WriteLine("                                                   |");
                 Console.WriteLine("                                                   |");
-                //if (spot)
-                {
-                }
+             
+                
+                
 
 
                 Console.WriteLine("1. Enroll a student                                |");
@@ -65,7 +65,7 @@ namespace SummerSchool
                 }
                 else if (menuEnt == 3)
                 {
-                    //Print();
+                    Print();
                 }
                 else if (menuEnt == 4)
                 {
@@ -121,9 +121,9 @@ namespace SummerSchool
             {
                 Console.WriteLine("------------------------------------------------------------------|");
                 Console.WriteLine();
-                Console.WriteLine("                  -----------------                ");
+                Console.WriteLine();
                 Console.WriteLine("You have entered: |> " + stu + " <| Would you like to continue?");
-                Console.WriteLine("                  -----------------                ");
+                Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("Enter 'Y' to enroll this student or 'N' to return to the menu.");
                 Console.WriteLine();
@@ -134,10 +134,21 @@ namespace SummerSchool
                     // if confirmed display enrolee and tuition
                     Students[spot] = stu;
                     string tuition = "200";
-                    Console.WriteLine("------------------------------------------------------------------|");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("******************************************************************|");
+                    Console.WriteLine("******************************************************************|");
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.WriteLine(stu + " has been enrolled at a tuition of £" + tuition);
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("******************************************************************|");
+                    Console.WriteLine("******************************************************************|");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine("Please press <ENTER> to return to the main menu.");
+                    Console.ReadKey();
                     Console.WriteLine();
 
                 }
@@ -166,16 +177,23 @@ namespace SummerSchool
         //{
         //    for (int = 0; i < Students.Length; i++)
         //    {
-        //        if
+        //        if ()
         //    }
         //}
-        //private static void Print()
-        //{
-        //    for (int i = 0; i < Students.Length; i++)
-        //    {
-        //        Console.WriteLine(i + 1 + ". " + Students[i]);
-        //    }
-        //}
+        private static void Print()
+        {
+            for (int i = 0; i < Students.Length; i++)
+            {
+                //Console.WriteLine(Students);    <---- only captured one arg  in array at a time presented weird
+                // Finally figured this out, for ever index i, add 1 and a ".", then the name stored in array Students[] for every i
+                Console.WriteLine(i + 1 + ". " + Students[i]);
+              
+            }
+            Console.WriteLine();
+            Console.WriteLine("Please press <ENTER> to return to the main menu.");
+            Console.ReadKey();
+            Console.WriteLine();
+        }
 
     }
 
