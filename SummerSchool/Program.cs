@@ -42,9 +42,9 @@ namespace SummerSchool
                 Console.WriteLine("---------------------------------------------------|");
                 Console.WriteLine("                                                   |");
                 Console.WriteLine("                                                   |");
-             
-                
-                
+
+
+
 
 
                 Console.WriteLine("1. Enroll a student                                |");
@@ -72,27 +72,48 @@ namespace SummerSchool
                     //Quit
                     break;
                 }
-                else
+
+
+                else if (menuEnt > 4)
                 {
+
                     Console.WriteLine("---------------------------------------------------|");
                     Console.WriteLine("                                                   |");
                     Console.WriteLine("Invalid entry. Please select on of the options listed by enter in number and pressing >ENTER<");
                     Console.ReadKey();
                     Console.WriteLine("                                                   |");
                     Console.WriteLine("---------------------------------------------------|");
-
-                    // not sure what all is suposed to be here. or if I have/am missing {'s....
                 }
+                // not sure how to capture non-integer inputs
+                //else
+                //{
+                //    string strgMenuEnt = Convert.ToString(menuEnt);
+                //    strMenuEnt 
+
+                //    Console.WriteLine("---------------------------------------------------|");
+                //    Console.WriteLine("                                                   |");
+                //    Console.WriteLine("Invalid entry. Please select on of the options listed by enter in number and pressing >ENTER<");
+                //    Console.ReadKey();
+                //    Console.WriteLine("                                                   |");
+                //    Console.WriteLine("---------------------------------------------------|");
+                //}
+
             }
+
+
         }
+        //else
+        //{
+
+        //}
+
+
 
         //---------------------------------------------------------------------------
 
 
-        //static string Tuition()
-        //{
-        //    Console.WriteLine("200");
-        //}
+
+
 
         static void Enroll()
         {
@@ -174,40 +195,56 @@ namespace SummerSchool
             // if we get through the whole 
             return -1;
         }
+            ////static void Unenroll()
+            ////{
+            ////    for (int = 0; i < Students.Length; i++)
+            ////    {
+            ////        if ()
+            ////    }
+            ////}
+            ////static void Tuition()
+            ////{
+            //    //int tuition;
 
-        //static void Unenroll()
-        //{
-        //    for (int = 0; i < Students.Length; i++)
-        //    {
-        //        if ()
-        //    }
-        //}
+            //    //for (int i = 0; i < Students.Length; i++)
+            //    //{
+
+            //    //}
+
+            //}
+           
         private static void Print()
         {
             Console.WriteLine();
             Console.WriteLine("Enrolled Students");
             Console.WriteLine("-----------------");
             for (int i = 0; i < Students.Length; i++)
-            {                
+            {
                 if (Students[i] != null)
                 {
                     //Console.WriteLine(Students);    <---- only captured one arg  in array at a time presented weird
                     // Finally figured this out, for ever index i, add 1 and a ".", then the name stored in array Students[] for every i
-                    
-                    Console.WriteLine(i + 1 + ". " + Students[i]);
+
+                    Console.WriteLine(i + 1 + ". " + Students[i] + "   Tuition: £200");
                     // add line to total enrolled students and display # of available spots                    
-                }               
+                }
 
             }
             Console.WriteLine();
             Console.WriteLine("Please press <ENTER> to return to the main menu.");
             Console.ReadKey();
             Console.WriteLine();
+            Console.WriteLine();
         }
-
     }
-
 }
+
+
+
+
+
+
+
 
 
 
