@@ -15,6 +15,7 @@ namespace SummerSchool
             while (true)
             {
                 //blank "Console.WriteLine();'s" are to create spacing/padding to help with visual presentation on ui
+                //Not at all coding related ignore lol ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 // ui bank:
                 //Console.WriteLine("                                                   |");
                 //Console.WriteLine("***************************************************|");                
@@ -24,6 +25,7 @@ namespace SummerSchool
                 //ui bank 2.0:
                 //Console.WriteLine("------------------------------------------------------------------|");
 
+                //Not at all coding related ignore lol ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
                 Console.WriteLine();
@@ -97,6 +99,11 @@ namespace SummerSchool
                 //    Console.WriteLine("                                                   |");
                 //    Console.WriteLine("---------------------------------------------------|");
                 //}
+
+
+
+
+
 
             }
 
@@ -197,30 +204,37 @@ namespace SummerSchool
         }
 
         // Method to Unenroll students. Present list of stus and take user selection, remove corresponding stu, confirm selection
-            private static void Unenroll()
+        private static void Unenroll()
         {
-            Console.WriteLine("Please select the number of the student you would like to unenroll.");
+            //Print method shows current enrollees
             Print();
+            Console.WriteLine("Please select the number of the student you would like to unenroll.");
 
+            //capture user choice
             int stuNum = Convert.ToInt32(Console.ReadLine());
+            //convert users # selection to correlating index
             int stuIndex = stuNum - 1;
+            // Present selected stu
             Console.WriteLine("You have selected:");
             Console.WriteLine("****|>" + Students[stuIndex] + "<|****");
+            //confirm unenroll
             Console.WriteLine("Are you sure you want to uneroll this student?  Enter: y/n");
             string unenrollconf = Console.ReadLine();
-            if (unenrollconf.ToLower() == "y");
+            // remove if confirmed
+            if (unenrollconf.ToLower() == "y")
             {
+                //removes student from array index slot
                 Students[stuIndex] = null;
-                Console.WriteLine("The student has been unenrolled.");
-                Print();
+            Console.WriteLine("The student has been unenrolled.");
+            Print();
 
-                Console.WriteLine("Press any key to return to the menu.");
-                Console.ReadKey();
+                //Console.WriteLine("Press any key to return to the menu.");
+                //Console.ReadKey();
 
             }
         }
-            
-           
+
+
         private static void Print()
         {
             Console.WriteLine();
@@ -236,14 +250,20 @@ namespace SummerSchool
                     Console.WriteLine(i + 1 + ". " + Students[i] + "   Tuition: £200");
                     // add line to total enrolled students and display # of available spots                    
                 }
+                
 
             }
-            Console.WriteLine();
-            Console.WriteLine("Please press <ENTER> to return to the main menu.");
-            Console.ReadKey();
-            Console.WriteLine();
-            Console.WriteLine();
+            //Console.WriteLine();
+            //Console.WriteLine("Please press <ENTER> to return to continue.");
+            //Console.ReadKey();
+            //Console.WriteLine();
+            //Console.WriteLine();
         }
+        Console.WriteLine();
+        Console.WriteLine("Please press <ENTER> to return to continue.");
+        Console.ReadKey();
+        Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
