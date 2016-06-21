@@ -199,12 +199,25 @@ namespace SummerSchool
         // Method to Unenroll students. Present list of stus and take user selection, remove corresponding stu, confirm selection
             private static void Unenroll()
         {
-            Console.WriteLine("Please select the student you would like to unenroll.");
+            Console.WriteLine("Please select the number of the student you would like to unenroll.");
             Print();
 
             int stuNum = Convert.ToInt32(Console.ReadLine());
             int stuIndex = stuNum - 1;
-            Console.WriteLine(Students[stuIndex]);
+            Console.WriteLine("You have selected:");
+            Console.WriteLine("****|>" + Students[stuIndex] + "<|****");
+            Console.WriteLine("Are you sure you want to uneroll this student?  Enter: y/n");
+            string unenrollconf = Console.ReadLine();
+            if (unenrollconf.ToLower() == "y");
+            {
+                Students[stuIndex] = null;
+                Console.WriteLine("The student has been unenrolled.");
+                Print();
+
+                Console.WriteLine("Press any key to return to the menu.");
+                Console.ReadKey();
+
+            }
         }
             
            
